@@ -15,7 +15,7 @@ namespace NumberGuesser
 
                 //Init with correct number
                 Random random = new Random();
-                int correctNumber = random.Next(1, 10);
+                int correctNumber = random.Next(1, 11);
 
                 //Guess var
                 int guess = 0;
