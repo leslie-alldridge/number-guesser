@@ -26,7 +26,8 @@ namespace NumberGuesser
             Console.WriteLine("Hello {0}, let's play a game...", inputName);
 
             //Init with correct number
-            int correctNumber = 7;
+            Random random = new Random();
+            int correctNumber = random.Next(1, 10);
 
             //Guess var
             int guess = 0;
@@ -38,6 +39,15 @@ namespace NumberGuesser
             {
                 //get input
                 string input = Console.ReadLine();
+                //check input is a number
+                if (!int.TryParse(input, out guess))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Please enter a number");
+                    Console.ResetColor();
+                    continue;
+                }
+
                 //parse input to int
                 guess = Int32.Parse(input);
                 //match guess to correct number
