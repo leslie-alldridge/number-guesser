@@ -2,4 +2,4 @@
 Number Guessing Console Game - C#
 
 ## To run the app
-Navigate to bin/
+Navigate to NumberGuesser/bin/NumberGuesser.exe
